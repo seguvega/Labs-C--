@@ -15,17 +15,10 @@ public:
 
 	AFloatingActor();
 
-
-	UPROPERTY(EditAnywhere, Category = "Movement")
-	float AmplitudeX;
-
-	UPROPERTY(EditAnywhere, Category = "Movement")
-	float AmplitudeY;
-
 	UPROPERTY( EditAnywhere, Category = "Movement")
 	float MovAmplitude;
 
-	UPROPERTY(EditAnywhere, Category = "Movement", meta = (ClampMin = "0.6", ClampMax = "1.4"))
+	UPROPERTY(EditAnywhere, Category = "Movement", meta = (ClampMin = "0.6", ClampMax = "1.5"))
 	float XYFactor;
 
 	virtual void Tick(float DeltaTime) override;
@@ -33,6 +26,10 @@ public:
 
 protected:
 	float RunningTime;
+
+	float AmplitudeX;
+
+	float AmplitudeY;
 
 	virtual void BeginPlay() override;
 
