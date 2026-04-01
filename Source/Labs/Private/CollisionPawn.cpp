@@ -58,8 +58,6 @@ ACollisionPawn::ACollisionPawn()
 
 	// Take control of the default player
 	AutoPossessPlayer = EAutoReceiveInput::Player0;
-
-	tempCount = 0;
 }
 
 void ACollisionPawn::BeginPlay()
